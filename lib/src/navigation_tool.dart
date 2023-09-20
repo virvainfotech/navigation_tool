@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:navigation_tool/navigationbar_mobile_web.dart';
 
-class CustomNavigation extends ConsumerStatefulWidget {
-  const CustomNavigation({
+class NavigationTool extends ConsumerStatefulWidget {
+  const NavigationTool({
     this.appBar,
     /// tabs and icon both (NavigationRail and BottomNavigationBar)
     required this.navigationTabs,
@@ -86,10 +86,10 @@ class CustomNavigation extends ConsumerStatefulWidget {
   final AppBar? appBar;
 
   @override
-  ConsumerState<CustomNavigation> createState() => _NavigationState();
+  ConsumerState<NavigationTool> createState() => _NavigationState();
 }
 
-class _NavigationState extends ConsumerState<CustomNavigation> {
+class _NavigationState extends ConsumerState<NavigationTool> {
   @override
   Widget build(BuildContext context) {
     final int selectedIndex = ref.watch(navigationIndexProvider);

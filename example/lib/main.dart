@@ -37,7 +37,7 @@ class MyApp extends ConsumerWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      body: CustomNavigation(
+      body: NavigationTool(
         extendedNavRail: isNavRailExpanded,
         labelTypeNavRail: NavigationRailLabelType.all,
         navigationTabs: NavigationItems().tabs,
