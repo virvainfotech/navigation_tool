@@ -3,8 +3,8 @@
 `NavigationTool` Introducing a comprehensive Flutter widget solution designed to seamlessly handle navigation in diverse applications, accommodating various screen sizes. This solution harnesses the capabilities of both NavigationBar and NavigationRail, offering a versatile and powerful navigation experience.
 
 <img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/9a40d069-e165-4034-838b-6582c3e937b0" height="500" />
-<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/e669fbe4-e9ec-48c5-9be8-0582b0d95e8d" height="300" />
-<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/32031da0-0e5b-4719-b0b8-cbfc72dc4ee3" height="300" />
+<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/e669fbe4-e9ec-48c5-9be8-0582b0d95e8d" height="320" />
+<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/32031da0-0e5b-4719-b0b8-cbfc72dc4ee3" height="320" />
 
 ## Features
 
