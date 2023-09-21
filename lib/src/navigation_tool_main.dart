@@ -135,7 +135,7 @@ class NavigationTool extends ConsumerStatefulWidget {
   /// When a [NavigationRailDestination] is not selected,
   /// [unselectedLabelTextStyle] will be used.
   ///
-  /// The default value is based on the [TextTheme.bodyText1] of
+  /// The default value is based on the [TextTheme.bodyLarge] of
   /// [ThemeData.textTheme]. The default color is based on the [Theme]'s
   /// [ColorScheme.primary].
   ///
@@ -162,7 +162,7 @@ class NavigationTool extends ConsumerStatefulWidget {
   /// When one of the [destinations] is selected the [selectedLabelTextStyle]
   /// will be used instead.
   ///
-  /// The default value is based on the [Theme]'s [TextTheme.bodyText1]. The
+  /// The default value is based on the [Theme]'s [TextTheme.bodyLarge]. The
   /// default color is based on the [Theme]'s [ColorScheme.onSurface].
   ///
   /// Properties from this text style, or
@@ -205,7 +205,7 @@ class NavigationTool extends ConsumerStatefulWidget {
   ///
   /// The accompanying [Text] widget will use
   /// [NavigationBarThemeData.labelTextStyle]. If this are null, the default
-  /// text style would use [TextTheme.overline] with [ColorScheme.onSurface].
+  /// text style would use [TextTheme.labelSmall] with [ColorScheme.onSurface].
   final List<String>? labelsBottomNavBar;
 
   /// The text to display in the tooltip for this [NavigationDestination], when
