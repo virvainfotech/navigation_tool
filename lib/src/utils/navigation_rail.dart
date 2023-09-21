@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:navigation_tool/navigation_tool.dart';
@@ -55,7 +54,8 @@ class NavigationRailWidget extends ConsumerWidget {
 
     return SingleChildScrollView(
       child: ConstrainedBox(
-        constraints: BoxConstraints(minHeight: MediaQuery.of(context).size.height),
+        constraints:
+            BoxConstraints(minHeight: MediaQuery.of(context).size.height),
         child: IntrinsicHeight(
           // Vertical menu bar
           child: NavigationRail(

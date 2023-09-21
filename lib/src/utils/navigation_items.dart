@@ -45,4 +45,3 @@ List<NavigationDestination> bottomNavigationBarItem({
   }
   return bottomNavBarItem;
 }
-
