@@ -11,4 +11,5 @@ class SelectedPageIndexNotifier extends StateNotifier<int> {
 }
 
 final navigationIndexProvider =
-StateNotifierProvider<SelectedPageIndexNotifier, int>((ref) => SelectedPageIndexNotifier());
+    StateNotifierProvider<SelectedPageIndexNotifier, int>(
+        (ref) => SelectedPageIndexNotifier());

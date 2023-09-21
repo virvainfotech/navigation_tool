@@ -2,7 +2,7 @@ import 'package:example/navigation_items.dart';
 import 'package:example/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:navigation_tool/navigationbar_mobile_web.dart';
+import 'package:navigation_tool/navigation_tool.dart';
 
 void main() {
   runApp(
