@@ -437,17 +437,17 @@ class _NavigationState extends ConsumerState<NavigationTool> {
               navRailTrailing: widget.trailingNavRail,
               navRailBackgroundColor: widget.backgroundColorNavRail,
               navRailElevation: widget.elevationNavRail,
-              navRailExtended:
-                  widget.extendedNavRail == true || (screenWidth >= 1500 && widget.extendedNavRail == true)
-                      ? true
-                      : false,
+              navRailExtended: widget.extendedNavRail == true ||
+                      (screenWidth >= 1500 && widget.extendedNavRail == true)
+                  ? true
+                  : false,
               navRailGroupAlignment: widget.groupAlignmentNavRail,
               navRailIndicatorColor: widget.indicatorColorNavRail,
               navRailInsidePadding: widget.insidePaddingNavRail,
-              navRailLabelType:
-                  widget.extendedNavRail == true || (screenWidth >= 1500 && widget.extendedNavRail == true)
-                      ? NavigationRailLabelType.none
-                      : widget.labelTypeNavRail,
+              navRailLabelType: widget.extendedNavRail == true ||
+                      (screenWidth >= 1500 && widget.extendedNavRail == true)
+                  ? NavigationRailLabelType.none
+                  : widget.labelTypeNavRail,
               navRailMinExtendedWidth: widget.minExtendedWidthNavRail,
               navRailMinWidth: widget.minWidthNavRail,
               navRailSelectedIconTheme: widget.selectedIconThemeNavRail,

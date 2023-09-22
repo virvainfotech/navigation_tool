@@ -25,18 +25,23 @@ List<NavigationRailDestination> navigationRailDestination({
     // If the badgeContent is not null and it's length id greater then the current index then badge related stuff will add to the '[badgeWidget]' and
     // NavigationRail is not extended
     // else just add just icons to the '[badgeWidget]'
-    if (badgeContent != null && badgeContent.length > i && navRailExtended == false) {
+    if (badgeContent != null &&
+        badgeContent.length > i &&
+        navRailExtended == false) {
       // Badge position at top left
       badgeWidget = badges.Badge(
         position: badges.BadgePosition.topEnd(top: -15, end: -15),
-        showBadge: badgeShow != null && badgeShow.length > i ? badgeShow[i] : false,
+        showBadge:
+            badgeShow != null && badgeShow.length > i ? badgeShow[i] : false,
         badgeAnimation: const badges.BadgeAnimation.size(
           appearanceDisappearanceFadeAnimationEnabled: false,
           toAnimate: false,
         ),
         badgeContent: badgeContent[i],
         badgeStyle: badges.BadgeStyle(
-          badgeColor: badgeColor != null && badgeColor.length > i ? badgeColor[i] : Colors.red,
+          badgeColor: badgeColor != null && badgeColor.length > i
+              ? badgeColor[i]
+              : Colors.red,
         ),
         child: navRailIcons[i],
       );
@@ -48,17 +53,22 @@ List<NavigationRailDestination> navigationRailDestination({
     // If the badgeContent is not null and it's length id greater then the current index then badge related stuff will add to the '[badgeWidget]' and
     // NavigationRail is not extended
     // else just add just labels to the '[labelWidget]'
-    if (badgeContent != null && badgeContent.length > i && navRailExtended == true) {
+    if (badgeContent != null &&
+        badgeContent.length > i &&
+        navRailExtended == true) {
       labelWidget = badges.Badge(
         position: badges.BadgePosition.topEnd(top: -12, end: -20),
-        showBadge: badgeShow != null && badgeShow.length > i ? badgeShow[i] : false,
+        showBadge:
+            badgeShow != null && badgeShow.length > i ? badgeShow[i] : false,
         badgeAnimation: const badges.BadgeAnimation.size(
           appearanceDisappearanceFadeAnimationEnabled: false,
           toAnimate: false,
         ),
         badgeContent: badgeContent[i],
         badgeStyle: badges.BadgeStyle(
-          badgeColor: badgeColor != null && badgeColor.length > i ? badgeColor[i] : Colors.red,
+          badgeColor: badgeColor != null && badgeColor.length > i
+              ? badgeColor[i]
+              : Colors.red,
         ),
         child: navRailLabels[i],
       );
@@ -103,14 +113,17 @@ List<NavigationDestination> bottomNavigationBarItem({
       // Badge position at top left
       badgeWidget = badges.Badge(
         position: badges.BadgePosition.topEnd(top: -15, end: -15),
-        showBadge: badgeShow != null && badgeShow.length > i ? badgeShow[i] : false,
+        showBadge:
+            badgeShow != null && badgeShow.length > i ? badgeShow[i] : false,
         badgeAnimation: const badges.BadgeAnimation.size(
           appearanceDisappearanceFadeAnimationEnabled: false,
           toAnimate: false,
         ),
         badgeContent: badgeContent[i],
         badgeStyle: badges.BadgeStyle(
-          badgeColor: badgeColor != null && badgeColor.length > i ? badgeColor[i] : Colors.red,
+          badgeColor: badgeColor != null && badgeColor.length > i
+              ? badgeColor[i]
+              : Colors.red,
         ),
         child: iconsBottomNavBar[i],
       );
@@ -122,9 +135,17 @@ List<NavigationDestination> bottomNavigationBarItem({
     bottomNavBarItem.add(
       NavigationDestination(
         icon: badgeWidget,
-        label: labelsBottomNavBar != null && labelsBottomNavBar.length > i ? labelsBottomNavBar[i] : '',
-        selectedIcon: selectedIconBottomNavBar != null && selectedIconBottomNavBar.length > i ? selectedIconBottomNavBar[i] : null,
-        tooltip: tooltipItemBottomNavBar != null && tooltipItemBottomNavBar.length > i ? tooltipItemBottomNavBar[i] : '',
+        label: labelsBottomNavBar != null && labelsBottomNavBar.length > i
+            ? labelsBottomNavBar[i]
+            : '',
+        selectedIcon: selectedIconBottomNavBar != null &&
+                selectedIconBottomNavBar.length > i
+            ? selectedIconBottomNavBar[i]
+            : null,
+        tooltip: tooltipItemBottomNavBar != null &&
+                tooltipItemBottomNavBar.length > i
+            ? tooltipItemBottomNavBar[i]
+            : '',
       ),
     );
   }
