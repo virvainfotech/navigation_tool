@@ -24,6 +24,9 @@ class NavigationRailWidget extends ConsumerWidget {
     this.navRailLabelType,
     this.navRailInsidePadding,
     this.navRailSelectedIcon,
+    this.badgeColor,
+    this.badgeContent,
+    this.badgeShow,
     super.key,
   });
 
@@ -47,6 +50,9 @@ class NavigationRailWidget extends ConsumerWidget {
   final NavigationRailLabelType? navRailLabelType;
   final EdgeInsetsGeometry? navRailInsidePadding;
   final List<Widget>? navRailSelectedIcon;
+  final List<Widget>? badgeContent;
+  final List<Color>? badgeColor;
+  final List<bool>? badgeShow;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -86,6 +92,10 @@ class NavigationRailWidget extends ConsumerWidget {
               navRailTabs: navRailTabs,
               padding: navRailInsidePadding,
               selectedIcon: navRailSelectedIcon,
+              badgeShow: badgeShow,
+              badgeContent: badgeContent,
+              badgeColor: badgeColor,
+              navRailExtended: navRailExtended ?? false,
             ),
             // Show at the bottom of the NavigationRailDestination rail
             trailing: navRailTrailing,

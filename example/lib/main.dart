@@ -45,6 +45,28 @@ class MyApp extends ConsumerWidget {
         labelsNavRail: NavigationItems().labelNavRail,
         labelsBottomNavBar: NavigationItems().labelBottomNav,
         minExtendedWidthNavRail: 200,
+        badgeContent: const [
+          Text(''),
+          Text(''),
+          Text('5', style: TextStyle(fontSize: 10)),
+          Text('99+', style: TextStyle(fontSize: 10)),
+        ],
+        badgeShow: const [
+          false,
+          true,
+          true,
+          true,
+        ],
+        badgeColor: [
+          Colors.orange.shade800,
+          Colors.blueAccent,
+          Colors.green.shade800,
+          Colors.orange.shade800,
+          /*Colors.orange.shade800,
+          Colors.orange.shade800,
+          Colors.orange.shade800,
+          Colors.orange.shade800,*/
+        ],
         appBar: AppBar(
           title: const Text('Navigation Mobile Web'),
           //elevation: 2,
@@ -60,43 +82,41 @@ class MyApp extends ConsumerWidget {
           ],
         ),
         leadingNavRail: NavigationItems().navigationRailHeader(
-          width: screenWidth >= 1500 || isNavRailExpanded == true ? 160 : null,
+          width: (screenWidth >= 1500 && isNavRailExpanded == true) || isNavRailExpanded == true ? 160 : null,
           icon: Icons.format_list_bulleted_rounded,
           onTap: () {
-            if (screenWidth <= 1500) {
-              if (isNavRailExpanded == true) {
-                ref.read(isExpandedNavRail.notifier).toggle = false;
-              } else {
-                ref.read(isExpandedNavRail.notifier).toggle = true;
-              }
+            if (isNavRailExpanded == true) {
+              ref.read(isExpandedNavRail.notifier).toggle = false;
+            } else {
+              ref.read(isExpandedNavRail.notifier).toggle = true;
             }
           },
         ),
         trailingNavRail: NavigationItems().navigationRailTrailing(
-          width: screenWidth >= 1500 || isNavRailExpanded == true ? 160 : 60,
+          width: (screenWidth >= 1500 && isNavRailExpanded == true) || isNavRailExpanded == true ? 160 : 60,
           children: [
             TextButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.mail_outline),
-              label: screenWidth <= 1500 && isNavRailExpanded == false ? const Text('') : const Text('Send Mail'),
+              label: (screenWidth <= 1500 && isNavRailExpanded == false) || isNavRailExpanded == false ? const Text('') : const Text('Send Mail'),
             ),
             const SizedBox(height: 5),
             TextButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.search),
-              label: screenWidth <= 1500 && isNavRailExpanded == false ? const Text('') : const Text('Search'),
+              label: (screenWidth <= 1500 && isNavRailExpanded == false) || isNavRailExpanded == false ? const Text('') : const Text('Search'),
             ),
             const SizedBox(height: 5),
             TextButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.settings),
-              label: screenWidth <= 1500 && isNavRailExpanded == false ? const Text('') : const Text('Setting'),
+              label: (screenWidth <= 1500 && isNavRailExpanded == false) || isNavRailExpanded == false ? const Text('') : const Text('Setting'),
             ),
             const SizedBox(height: 5),
             TextButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.security),
-              label: screenWidth <= 1500 && isNavRailExpanded == false ? const Text('') : const Text('Security'),
+              label: (screenWidth <= 1500 && isNavRailExpanded == false) || isNavRailExpanded == false ? const Text('') : const Text('Security'),
             ),
             const SizedBox(height: 10),
           ],

@@ -1,6 +1,11 @@
+## 0.1.3
+
+* Add badges
+* Bug Fixing
+
 ## 0.1.2
 
-* format code
+* Format code
 
 ## 0.1.1
 

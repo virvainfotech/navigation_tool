@@ -15,6 +15,9 @@ class BottomNavigationBarWidget extends ConsumerWidget {
     this.animationDuration,
     this.labelBehavior,
     this.surfaceTintColor,
+    this.badgeColor,
+    this.badgeContent,
+    this.badgeShow,
     Key? key,
   }) : super(key: key);
   final List tabsBottomNavBar;
@@ -28,6 +31,9 @@ class BottomNavigationBarWidget extends ConsumerWidget {
   final Duration? animationDuration;
   final NavigationDestinationLabelBehavior? labelBehavior;
   final Color? surfaceTintColor;
+  final List<Widget>? badgeContent;
+  final List<Color>? badgeColor;
+  final List<bool>? badgeShow;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -40,6 +46,9 @@ class BottomNavigationBarWidget extends ConsumerWidget {
         selectedIconBottomNavBar: selectedIconBottomNavBar,
         labelsBottomNavBar: labelsBottomNavBar,
         tooltipItemBottomNavBar: tooltipItemBottomNavBar,
+        badgeColor: badgeColor,
+        badgeContent: badgeContent,
+        badgeShow: badgeShow,
       ),
       elevation: elevation,
       backgroundColor: backgroundColor,

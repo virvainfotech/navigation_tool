@@ -6,15 +6,15 @@ class NavigationTool extends ConsumerStatefulWidget {
   const NavigationTool({
     this.appBar,
 
-    /// tabs and icon both (NavigationRail and BottomNavigationBar)
+    // tabs and icon both (NavigationRail and BottomNavigationBar)
     required this.navigationTabs,
     required this.navigationIcons,
 
-    /// Default screen width,
-    /// if the screen with is less then 1000 than show bottom navigation bar else show navigation rail
+    // Default screen width,
+    // if the screen with is less then 1000 than show bottom navigation bar else show navigation rail
     this.screenWidth = 1000,
 
-    /// NavigationRail Property
+    // NavigationRail Property
     required this.labelsNavRail,
     this.leadingNavRail,
     this.trailingNavRail,
@@ -34,7 +34,7 @@ class NavigationTool extends ConsumerStatefulWidget {
     this.insidePaddingNavRail,
     this.selectedIconNavRail,
 
-    /// Bottom navigation bar Property
+    // Bottom navigation bar Property
     this.labelsBottomNavBar, // Bottom navigation bar label (String)
     this.tooltipItemBottomNavBar,
     this.selectedIconBottomNavBar,
@@ -44,6 +44,11 @@ class NavigationTool extends ConsumerStatefulWidget {
     this.labelBehaviorBottomNavBar,
     this.heightBottomNavBar,
     this.surfaceTintColorBottomNavBar,
+
+    // Badge
+    this.badgeShow,
+    this.badgeContent,
+    this.badgeColor,
     super.key,
   });
 
@@ -62,7 +67,7 @@ class NavigationTool extends ConsumerStatefulWidget {
   final List<Widget> labelsNavRail;
 
   /// Default screen width,
-  /// if the screen with is less then 1000 than show bottom navigation bar else show navigation rail
+  /// if the screen with is less then 1000 than show Bottom Navigation bar else show Navigation Rail
   final double screenWidth;
 
   /// The leading widget in the rail that is placed above the destinations.
@@ -376,6 +381,21 @@ class NavigationTool extends ConsumerStatefulWidget {
   ///  * Cookbook: [Place a floating app bar above a list](https://flutter.dev/docs/cookbook/lists/floating-app-bar)
   final AppBar? appBar;
 
+  /// Content inside badge. Give content for individual tab.
+  /// For example, given a list of tabs represented as widgets, like [[Text('3'), Text('2'), Text('55')]], if a particular tab does not have a badge,
+  ///you should set the ['badgeShow'] property to false for that specific tab and set an empty Text('') as the ['badgeContent'] for that tab.
+  final List<Widget>? badgeContent;
+
+  /// Background color of the badge.
+  /// If [gradient] is not null, this property will be ignored.
+  /// Default color background color of the badge is [red].
+  final List<Color>? badgeColor;
+
+  /// Allows you to hide or show entire badge.
+  /// The default value is ['false'].
+  /// Set ['true'] or ['false'] for particular tab
+  final List<bool>? badgeShow;
+
   @override
   ConsumerState<NavigationTool> createState() => _NavigationState();
 }
@@ -401,6 +421,9 @@ class _NavigationState extends ConsumerState<NavigationTool> {
               tooltipItemBottomNavBar: widget.tooltipItemBottomNavBar,
               labelBehavior: widget.labelBehaviorBottomNavBar,
               animationDuration: widget.animationDurationBottomNavBar,
+              badgeShow: widget.badgeShow,
+              badgeContent: widget.badgeContent,
+              badgeColor: widget.badgeColor,
             ),
       body: Row(
         children: [
@@ -415,14 +438,14 @@ class _NavigationState extends ConsumerState<NavigationTool> {
               navRailBackgroundColor: widget.backgroundColorNavRail,
               navRailElevation: widget.elevationNavRail,
               navRailExtended:
-                  widget.extendedNavRail == true || screenWidth >= 1500
+                  widget.extendedNavRail == true || (screenWidth >= 1500 && widget.extendedNavRail == true)
                       ? true
                       : false,
               navRailGroupAlignment: widget.groupAlignmentNavRail,
               navRailIndicatorColor: widget.indicatorColorNavRail,
               navRailInsidePadding: widget.insidePaddingNavRail,
               navRailLabelType:
-                  widget.extendedNavRail == true || screenWidth >= 1500
+                  widget.extendedNavRail == true || (screenWidth >= 1500 && widget.extendedNavRail == true)
                       ? NavigationRailLabelType.none
                       : widget.labelTypeNavRail,
               navRailMinExtendedWidth: widget.minExtendedWidthNavRail,
@@ -435,6 +458,9 @@ class _NavigationState extends ConsumerState<NavigationTool> {
                   widget.unselectedLabelTextStyleNavRail,
               navRailUseIndicator: widget.useIndicatorNavRail,
               navRailSelectedIcon: widget.selectedIconNavRail,
+              badgeColor: widget.badgeColor,
+              badgeShow: widget.badgeShow,
+              badgeContent: widget.badgeContent,
             ),
           Expanded(
             child: Column(
