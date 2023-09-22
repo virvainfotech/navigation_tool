@@ -3,8 +3,9 @@
 `NavigationTool` Introducing a comprehensive Flutter widget solution designed to seamlessly handle navigation in diverse applications, accommodating various screen sizes. This solution harnesses the capabilities of both NavigationBar and NavigationRail, offering a versatile and powerful navigation experience.
 
 <img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/9a40d069-e165-4034-838b-6582c3e937b0" height="500" />
-<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/e669fbe4-e9ec-48c5-9be8-0582b0d95e8d" height="320" />
-<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/32031da0-0e5b-4719-b0b8-cbfc72dc4ee3" height="320" />
+<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/692b43ac-87c6-49a1-90a1-bfddaceb4e5c" height="320" />
+<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/144b821f-90bd-4cf8-9f4e-625fa6184b82" height="320" />
+<img src="https://github.com/virvainfotech/navigation_tool/assets/72858246/260bb49f-8471-4962-ad8c-8370ca5ab2e7" height="400" />
 
 ## Features
 
@@ -14,11 +15,13 @@
  - Automatically adjust the navigation's visual appearance to fit the app's `current theme`, ensuring a cohesive design.
  - Offer compatibility with popular state management solution `Riverpod` to ensure consistent navigation state across the app.
  - This package combines the features of both the navigation rail and navigation bar while allowing for extensive customization to suit your needs.
-
+ - Add badges to Navigation Tool for a sleek and informative user experience. Choose from a wide range of `badge types` and `colors` to suit your app's design.
+   
 ## Getting started
 
 - To use this package, add `navigation_tool` as a dependency in your pubspec.yaml file.
-- To get started, simply wrap your MaterialApp with a ProviderScope from Riverpod.
+- To get started, simply wrap your MaterialApp with a ProviderScope from flutter riverpod state management.
+- To obtain comprehensive information, please refer to the provided detailed example.
 
 ## Usage
 
