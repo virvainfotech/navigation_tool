@@ -255,10 +255,6 @@ class NavigationTool extends ConsumerStatefulWidget {
   /// automatically.
   ///
   /// The height does not adjust with [ThemeData.visualDensity] or
-  /// [MediaQueryData.textScaleFactor] as this component loses usability at
-  /// larger and smaller sizes due to the truncating of labels or smaller tap
-  /// targets.
-  ///
   /// If null, [NavigationBarThemeData.height] is used. If that
   /// is also null, the default is 80.
   final double? heightBottomNavBar;

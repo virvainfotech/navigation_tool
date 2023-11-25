@@ -1,3 +1,8 @@
+## 0.1.5
+
+* Bug fixing
+* Improve performance
+
 ## 0.1.4
 
 * Refactor code
