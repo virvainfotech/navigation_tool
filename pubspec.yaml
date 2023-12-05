@@ -1,6 +1,6 @@
 name: navigation_tool
 description: A navigation tool for Mobile and Web application. NavigationBar and NavigationRail together.
-version: 0.1.5
+version: 0.1.6
 homepage: https://github.com/virvainfotech/navigation_tool.git
 
 environment:
